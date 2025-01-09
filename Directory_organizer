@@ -1,0 +1,22 @@
+#!/bin/bash
+#ON HOLD
+<<COMMENT
+Date: 6 January 2025
+Script to organise Images, Documents, Audio, Video and Archives in Downloads directory
+COMMENT
+
+
+mkdir -p ~/Downloads/Images
+find ~/Downloads -type f \( -iname "*.jpg" -o -iname "*.png" -o -iname "*.gif" -o -iname "*.bmp" -o -iname "*.svg" -o -iname "*.tiff" -o -iname "*.webp" \) -exec mv {} ~/Downloads/Images/ \;
+
+mkdir -p ~/Downloads/Documents
+find ~/Downloads -type f \( -iname "*.doc" -o -iname "*.docx" -o -iname "*.pdf" -o -iname "*.txt" -o -iname "*.odt" -o -iname "*.rtf" -o -iname "*.ppt" -o -iname "*.pptx" -o -iname "*.xls" -o -iname "*.xlsx" -o -iname "*.csv" \) -exec mv {} ~/Downloads/Documents/ \;
+
+mkdir -p ~/Downloads/Audio
+find ~/Downloads -type f \( -iname "*.mp3" -o -iname "*.wav" -o -iname "*.flac" -o -iname "*.aac" -o -iname "*.ogg" -o -iname "*.m4a" \) -exec mv {} ~/Downloads/Audio/ \;
+
+mkdir -p ~/Downloads/Video
+find ~/Downloads -type f \( -iname "*.mp4" -o -iname "*.avi" -o -iname "*.mkv" -o -iname "*.mov" -o -iname "*.wmv" -o -iname "*.flv" -o -iname "*.webm" \) -exec mv {} ~/Downloads/Video/ \;
+
+mkdir -p ~/Downloads/Archives
+find ~/Downloads -type f \( -iname "*.zip" -o -iname "*.rar" -o -iname "*.7z" -o -iname "*.tar" -o -iname "*.gz" -o -iname "*.iso" \) -exec mv {} ~/Downloads/Archives/ \;
